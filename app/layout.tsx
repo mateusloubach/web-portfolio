@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "mateusloubach.github.io",
     images: [
       {
-        url: "https://github.com/mateusloubach/portfoliov2/blob/main/public/mainimage.png",
+        url: "https://avatars.githubusercontent.com/u/53960269?s=400&u=4c0382b009d1fa906186b7ced2915a11f104d395&v=4",
         width: 1200,
         height: 630,
         alt: "Mateus Loubach — Software Engineer",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     creator: "mateusloubach",
     creatorId: "1243720976552144897",
     images: [
-      "https://github.com/mateusloubach/portfoliov2/blob/main/public/mainimage.png",
+      "https://avatars.githubusercontent.com/u/53960269?s=400&u=4c0382b009d1fa906186b7ced2915a11f104d395&v=4",
     ],
   },
   robots: {
