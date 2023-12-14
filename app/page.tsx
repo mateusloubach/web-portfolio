@@ -14,6 +14,7 @@ const Blog = dynamic(() => import("./blog-section/BlogGrid"));
 const Contact = dynamic(() => import("./contact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
 
+
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions);
 
