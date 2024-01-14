@@ -16,7 +16,7 @@ const NotFound = () => {
       <div>
         <Link href="/" className="text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] uppercase">
           {" "}
-          <span className="underline underline-offset-2">Go Back</span>
+          <span className="underline underline-offset-2">Oops.. turn back!</span>
         </Link>
       </div>
     </div>
