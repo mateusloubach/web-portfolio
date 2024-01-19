@@ -20,7 +20,7 @@ export const preLoaderAnim = () => {
       ease: "Power3.easeOut",
     })
     .to(".texts-container span", {
-      duration: .5,
+      duration: .4,
       y: 70,
       skewY: -20,
       stagger: 0.2,
@@ -32,7 +32,7 @@ export const preLoaderAnim = () => {
       ease: "power3.inOut",
     })
     .from(".sub", {
-      duration: .5,
+      duration: .9,
       opacity: 0,
       y: 80,
       ease: "expo.easeOut",

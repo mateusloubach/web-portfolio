@@ -14,7 +14,7 @@ const Blog = () => {
         {" "}
         <AnimatedWords2
           title={"Blog"}
-          style={`flex max-w-[500px] flex-col items-start text-left text-[126px] ${Mattone.className} font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[160px] md:text-[190px] lg:text-center lg:text-[170px]`}
+          style={`flex max-w-[500px] flex-col items-start text-left text-[110px] ${Mattone.className} font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[160px] md:text-[190px] lg:text-center lg:text-[170px]`}
         />
         <AnimatedBody
           text="I also write articles to reinforce my knowledge and help others who might be building something cool."

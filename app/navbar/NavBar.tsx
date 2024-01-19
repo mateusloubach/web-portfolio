@@ -1,24 +1,59 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavBar = () => {
+  const [isHidden, setIsHidden] = useState(false);
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
     e.preventDefault();
-    // get the href and remove everything before the hash (#)
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
     const elem = document.getElementById(targetId);
     elem?.scrollIntoView({
       behavior: "smooth",
     });
   };
 
+  useEffect(() => {
+    const handleScrollEvent = () => {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+      // Set a threshold for when the navigation bar should be hidden (adjust as needed)
+      const threshold = document.body.scrollHeight - window.innerHeight;
+
+      setIsHidden(scrollPosition >= threshold);
+    };
+
+    // Add event listener for scroll
+    window.addEventListener("scroll", handleScrollEvent);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScrollEvent);
+    };
+  }, []);
+
+  // const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  //   // first prevent the default behavior
+  //   e.preventDefault();
+  //   // get the href and remove everything before the hash (#)
+  //   const href = e.currentTarget.href;
+  //   const targetId = href.replace(/.*\#/, "");
+  //   // get the element by id and use scrollIntoView
+  //   const elem = document.getElementById(targetId);
+  //   elem?.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
+
   return (
-    <nav className="fixed bottom-10 left-0 right-0 z-50 my-0  mx-auto  flex w-[306px] items-center justify-center gap-1 rounded-lg bg-[#07070a]/90 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
+    <nav
+      className={`fixed bottom-10 left-0 right-0 z-50 my-0 mx-auto flex w-[306px] items-center justify-center gap-1 rounded-lg bg-[#07070a]/90 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px] ${
+        isHidden && window.innerWidth <= 768 ? "hidden" : "" // Apply "hidden" class when isHidden is true and screen width is less than or equal to 768px
+      }`}
+    >
       {/* <Link
         href="https://drive.google.com/file/d/1SF6YrDn-Xr53JNxsRVZcMvhjOMpS-HMA/view"
         target="_blank"

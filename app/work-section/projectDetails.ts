@@ -23,9 +23,9 @@ export const devProjects = [
   },
   {
     id: 1,
-    name: "WeatherWizard",
+    name: "WeatherApp",
     description:
-      "WeatherWizard is a convenient and user-friendly tool that allows you to quickly and easily check the current weather and forecast for the next couple of days in any city.",
+      "WeatherApp is a convenient and user-friendly tool that allows you to quickly and easily check the current weather and forecast for the next couple of days in any city.",
     technologies: ["React", "CSS", "Chart.js"],
     github: "https://github.com/mateusloubach",
     demo: "https://github.com/mateusloubach",
@@ -34,7 +34,7 @@ export const devProjects = [
   },
   // {
   //   id: 2,
-  //   name: "Alpaca Image Generator",
+  //   name: "nameProject",
   //   description:
   //     "An image generator website that allows users to generate, combine, and download images.",
   //   technologies: ["React", "CSS", "Merge Images"],
@@ -47,7 +47,7 @@ export const devProjects = [
     id: 3,
     name: "Short URL",
     description:
-      "A website that reduces the length of your URL using Bit.ly's API",
+      "A website that reduces the length of your URL using Bit.ly's API; App is also an Open-Source project for anyone to copy an use. Have fun!",
     technologies: ["JavaScript", "CSS", "Bit.ly's API"],
     github: "https://github.com/mateusloubach/tool-shorturl",
     demo: "https://tool-shorturl.netlify.app/",
