@@ -7,16 +7,16 @@ export type SongProps = {
 
 export const songs = [
   {
-    title: "Cacto",
+    title: "Cactolândia",
     artist: "Mateus Loubach",
     image: require(".//../../public/songs/cacto-main.png"),
     link: "https://cactolandia.vercel.app/",
   },
   {
-    title: "b-Original",
+    title: "digitalXp",
     artist: "Mateus Loubach",
-    image: require(".//../../public/songs/b-original-main.png"),
-    link: "https://b-original.vercel.app/",
+    image: require(".//../../public/songs/digitalXp-main.png"),
+    link: "https://digitalxp.vercel.app/",
   },
   {
     title: "Portfolio v1",
@@ -25,33 +25,33 @@ export const songs = [
     link: "https://mateusloubach.github.io/",
   },
   {
-    title: "Loubach Imóveis",
+    title: "clockUi",
     artist: "Mateus Loubach",
-    image: require(".//../../public/songs/loubach-imoveis-main.png"),
-    link: "https://loubachimoveis.vercel.app/",
+    image: require(".//../../public/songs/clockUi.png"),
+    link: "https://clockui.vercel.app/",
   },
   {
-    title: "FastEntregas",
+    title: "Tesla Clone",
     artist: "Mateus Loubach",
-    image: require(".//../../public/songs/fastentregas-main.png"),
-    link: "https://fastentregas.vercel.app/",
-  },
-  {
-    title: "b-Original",
-    artist: "Mateus Loubach",
-    image: require(".//../../public/songs/b-original-main.png"),
-    link: "https://b-original.vercel.app/",
-  },
-  {
-    title: "Cacto",
-    artist: "Mateus Loubach",
-    image: require(".//../../public/songs/cacto-main.png"),
-    link: "https://cactolandia.vercel.app/",
+    image: require(".//../../public/songs/teslaClone.png"),
+    link: "https://mateusloubach-tesla.vercel.app/",
   },
   {
     title: "Loubach Imóveis",
     artist: "Mateus Loubach",
     image: require(".//../../public/songs/loubach-imoveis-main.png"),
     link: "https://loubachimoveis.vercel.app/",
+  },
+  {
+    title: "tool-shortUrl",
+    artist: "Mateus Loubach",
+    image: require(".//../../public/songs/shortUrl.png"),
+    link: "https://tool-shorturl.netlify.app/",
+  },
+  {
+    title: "Pick My Starter",
+    artist: "Mateus Loubach",
+    image: require(".//../../public/songs/pickMyStarter.png"),
+    link: "https://pickmystarter.netlify.app/",
   },
 ];
