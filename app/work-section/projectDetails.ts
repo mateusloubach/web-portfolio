@@ -23,14 +23,14 @@ export const devProjects = [
   },
   {
     id: 1,
-    name: "WeatherApp",
+    name: "././glossary",
     description:
-      "WeatherApp is a convenient and user-friendly tool that allows you to quickly and easily check the current weather and forecast for the next couple of days in any city.",
-    technologies: ["React", "CSS", "Chart.js"],
+      "Glossary is a public developer dictionary contaning a large library of content that helps and provides information regarding .",
+    technologies: ["noCode", "CSS", "Framer"],
     github: "https://github.com/mateusloubach",
-    demo: "https://github.com/mateusloubach",
-    image: require(".//../../public/projects/skywatch-new.png"),
-    available: false,
+    demo: "https://glossary.framer.ai/",
+    image: require(".//../../public/projects/glossary.png"),
+    available: true,
   },
   // {
   //   id: 2,
@@ -51,7 +51,7 @@ export const devProjects = [
     technologies: ["JavaScript", "CSS", "Bit.ly's API"],
     github: "https://github.com/mateusloubach/tool-shorturl",
     demo: "https://tool-shorturl.netlify.app/",
-    image: require(".//../../public/projects/shortener-new.png"),
+    image: require(".//../../public/projects/shortUrl.png"),
     available: true,
   },
   // {

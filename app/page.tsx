@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 const Work = dynamic(() => import("./work-section/Work"));
 const About = dynamic(() => import("./about-section/About"));
 const Blog = dynamic(() => import("./blog-section/BlogGrid"));
-const Contact = dynamic(() => import("./contact-section/Contact"));
+const Contact = dynamic(() => import("./cochromentact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
 
 
