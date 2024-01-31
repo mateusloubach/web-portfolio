@@ -44,14 +44,14 @@ export const devProjects = [
   //   available: true,
   // },
   {
-    id: 3,
-    name: "Short URL",
+    id: 2,
+    name: "Tattoo Studio",
     description:
       "A website that reduces the length of your URL using Bit.ly's API; App is also an Open-Source project for anyone to copy an use. Have fun!",
-    technologies: ["JavaScript", "CSS", "Bit.ly's API"],
-    github: "https://github.com/mateusloubach/tool-shorturl",
-    demo: "https://tool-shorturl.netlify.app/",
-    image: require(".//../../public/projects/shortUrl.png"),
+    technologies: ["Typescript", "CSS", "Framer"],
+    github: "https://github.com/mateusloubach/",
+    demo: "https://wazowskitattoo.framer.ai/",
+    image: require(".//../../public/projects/tattooshop.png"),
     available: true,
   },
   // {
