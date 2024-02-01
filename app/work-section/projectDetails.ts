@@ -47,7 +47,7 @@ export const devProjects = [
     id: 2,
     name: "Tattoo Studio",
     description:
-      "A website that reduces the length of your URL using Bit.ly's API; App is also an Open-Source project for anyone to copy an use. Have fun!",
+      "A Tattoo Studio website that allows users to book appointments, view the studio's portfolio, and get in touch with the studio.",
     technologies: ["Typescript", "CSS", "Framer"],
     github: "https://github.com/mateusloubach/",
     demo: "https://wazowskitattoo.framer.ai/",
