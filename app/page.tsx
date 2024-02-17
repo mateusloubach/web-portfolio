@@ -12,8 +12,6 @@ const Work = dynamic(() => import("./work-section/Work"));
 const About = dynamic(() => import("./about-section/About"));
 const Contact = dynamic(() => import("./contact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
-
-
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions);
 
@@ -24,6 +22,7 @@ export default function Home() {
     }
   }, [blobityInstance]);
 
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -31,13 +30,15 @@ export default function Home() {
     });
   }, []);
 
+
+
   return (
     <>
       <PreLoader />
 
       <NavBar />
 
-      {/* <ScrollerMotion> */}
+      <ScrollerMotion>
       <main className="flex flex-col items-center justify-center">
         <Hero />
         <Work />
@@ -45,7 +46,7 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-      {/* </ScrollerMotion> */}
+      </ScrollerMotion>
     </>
   );
 }

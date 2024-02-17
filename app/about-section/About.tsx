@@ -63,7 +63,7 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "JavaScript (ES6+), React.Js, TypeScript, Redux, Redux Toolkit, Wordpress, Next.Js, HTML5, Git/GitHub, NextAuth. "
+                  "React.Js, Next.Js, NextAuth, JavaScript (ES6+), TypeScript, Redux, Redux Toolkit, Wordpress, HTML5, Git/GitHub, Astro, Prisma. "
                 }
               />
             </div>
@@ -93,7 +93,7 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "Figma, Adobe XD, ProtoPie, Adobe Photoshop, UX Research, UI Design, Prototyping."
+                  "Figma, Adobe XD, Adobe LightRoom, Adobe Photoshop, UX Research, UI Design, Prototyping."
                 }
               />
             </div>

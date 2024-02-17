@@ -18,31 +18,22 @@ export const devProjects = [
     technologies: ["Next.js", "Typescript", "Prisma"],
     github: "https://github.com/mateusloubach",
     demo: "https://github.com/mateusloubach",
-    image: require(".//../../public/projects/flixify.webp"),
+    image: require(".//../../public/projects/pkmup.png"),
     available: false,
   },
+
   {
     id: 1,
-    name: "././glossary",
+    name: "barberShop",
     description:
-      "Glossary is a public developer dictionary contaning a large library of content that helps and provides information regarding .",
-    technologies: ["noCode", "CSS", "Framer"],
+      "Barbershop is a we application that allows you to book appointments, view the studio's services , and get in touch with the studio.",
+    technologies: ["NextJs", "Typescript", "Prisma"],
     github: "https://github.com/mateusloubach",
-    demo: "https://glossary.framer.ai/",
-    image: require(".//../../public/projects/glossary.png"),
-    available: true,
+    demo: "https://github.com/mateusloubach",
+    image: require(".//../../public/projects/barbershop.png"),
+    available: false,
   },
-  // {
-  //   id: 2,
-  //   name: "nameProject",
-  //   description:
-  //     "An image generator website that allows users to generate, combine, and download images.",
-  //   technologies: ["React", "CSS", "Merge Images"],
-  //   github: "https://github.com/victorcodess/alpaca-image-generator",
-  //   demo: "http://alpaca-image-generator-beta.vercel.app",
-  //   image: require(".//../../public/projects/alpaca-new.webp"),
-  //   available: true,
-  // },
+
   {
     id: 2,
     name: "Tattoo Studio",
@@ -55,7 +46,7 @@ export const devProjects = [
     available: true,
   },
   // {
-  //   id: 4,
+  //   id: 3,
   //   name: "Carpooling Service",
   //   description:
   //     "TMTM helps Covenant University students find fellow students who are headed to the same location, so they can share a ride and split the cost.",
@@ -65,17 +56,17 @@ export const devProjects = [
   //   image: require(".//../../public/projects/carpool-new.webp"),
   //   available: false,
   // },
-  // {
-  //   id: 5,
-  //   name: "MLSC.ng",
-  //   description:
-  //     "This is platform for Microsoft Learn Student Ambassadors to shorten links, append their sharing IDs and generate event certificates.",
-  //   technologies: ["Next.js", "Next Auth", "Tailwind CSS"],
-  //   github: "https://github.com/msp-nigeria/mlsc.ng-frontend",
-  //   demo: "",
-  //   image: require(".//../../public/projects/mlsc.png"),
-  //   available: false,
-  // },
+  {
+    id: 5,
+    name: "././glossary",
+    description:
+      "Glossary is a public developer dictionary contaning a large library of content that helps and provides information regarding .",
+    technologies: ["Next.js", "Next Auth", "Tailwind CSS"],
+    github: "https://github.com/msp-nigeria/mlsc.ng-frontend",
+    demo: "",
+    image: require(".//../../public/projects/glossary.png"),
+    available: false,
+  },
 ];
 
 export const designProjects = [
