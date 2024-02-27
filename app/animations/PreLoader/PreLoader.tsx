@@ -14,7 +14,7 @@ const PreLoader = () => {
         <span>Discover,</span>
         <span>Define,</span>
         <span>Develop,</span>
-        <span>Deliver,</span>
+        <span>Deliver</span>
         <div className="sub hidden"></div>
       </div>
     </div>

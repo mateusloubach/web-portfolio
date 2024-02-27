@@ -50,7 +50,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed bottom-10 left-0 right-0 z-50 my-0 mx-auto flex w-[306px] items-center justify-center gap-1 rounded-lg bg-[#07070a]/90 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px] ${
+      className={`fixed bottom-10 left-0 right-0 z-50 my-0 mx-auto flex w-[306px] items-center justify-center gap-1 rounded-lg bg-[#0e1016]/70 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px] ${
         isHidden && window.innerWidth <= 768 ? "hidden" : "" // Apply "hidden" class when isHidden is true and screen width is less than or equal to 768px
       }`}
     >

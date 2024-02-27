@@ -14,15 +14,13 @@ export const preLoaderAnim = () => {
     .from(".texts-container span", {
       duration: 1.5,
       delay: 1,
-      y: 70,
-      skewY: 10,
+      opacity: 0,
       stagger: 0.4,
       ease: "Power3.easeOut",
     })
     .to(".texts-container span", {
-      duration: 1,
-      y: 70,
-      skewY: -20,
+      duration: 1.5,
+      opacity: 0,
       stagger: 0.2,
       ease: "Power3.easeOut",
     })
@@ -34,14 +32,14 @@ export const preLoaderAnim = () => {
     .from(".sub", {
       duration: 1,
       opacity: 0,
-      y: 80,
-      ease: "expo.easeOut",
+      stagger: 0.1,
+      ease: "Power3.easeOut",
     })
     .to(
       ".preloader",
       {
         duration: 1.5,
-        height: "0vh",
+        opacity: 0,
         ease: "Power3.easeOut",
         onComplete: mobileLanding(),
       },
