@@ -29,9 +29,9 @@ export const devProjects = [
       "Barbershop is a we application that allows you to book appointments, view the studio's services , and get in touch with the studio.",
     technologies: ["NextJs", "Typescript", "Prisma"],
     github: "https://github.com/mateusloubach",
-    demo: "https://github.com/mateusloubach",
+    demo: "https://web-barbershops.vercel.app",
     image: require(".//../../public/projects/barbershop.png"),
-    available: false,
+    available: true,
   },
 
   {
