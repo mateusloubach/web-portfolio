@@ -8,6 +8,8 @@ import AnimatedWords2 from "../animations/AnimatedWords2";
 import { motion } from "framer-motion";
 import heartIcon from "../../public/heart icon.png";
 import { Mattone } from "../fonts/Mattone/Mattone";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { bodyAnimation } from "../animations/animations";
 
 const Contact = () => {
   return (
@@ -56,76 +58,55 @@ const Contact = () => {
           </div>
 
           <div className="flex gap-10 text-[16px] font-bold text-[#e4ded7]  sm:gap-14 sm:text-[24px] md:gap-10 md:text-[16px] lg:gap-20 lg:text-[28px]">
-            <Link
-              href="https://github.com/mateusloubach"
-              target="_blank"
-              aria-label="View GitHub Profile"
+          <Link
+            href="https://github.com/mateusloubach"
+            target="_blank"
+            aria-label="View GitHub Profile"
+          >
+            <motion.p
+              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+              variants={bodyAnimation}
             >
-              <AnimatedTitle
-                text={"GH"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/mateusloubach/"
-              target="_blank"
-              aria-label="View LinkedIn Profile"
+              <FaGithub size={46} />
+            </motion.p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/mateusloubach/"
+            target="_blank"
+            aria-label="View LinkedIn Profile"
+          >
+            <motion.p
+              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+              variants={bodyAnimation}
             >
-              <AnimatedTitle
-                text={"LN"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
-            <Link
-              href="https://twitter.com/mcesarloubach"
-              target="_blank"
-              aria-label="View Twitter Profile"
+              <FaLinkedin size={46} />
+            </motion.p>
+          </Link>
+          <Link
+            href="https://twitter.com/mcesarloubach"
+            target="_blank"
+            aria-label="View Twitter Profile"
+          >
+            <motion.p
+              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+              variants={bodyAnimation}
             >
-              <AnimatedTitle
-                text={"TW"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
+              <FaTwitter size={46} />
+            </motion.p>
+          </Link>
             <Link
-              href="https://www.instagram.com/mateuscloubach/"
-              target="_blank"
-              aria-label="View Instagram Profile"
+            href="https://www.instagram.com/mateuscloubach/"
+            target="_blank"
+            aria-label="View Instagram Profile"
+          >
+            <motion.p
+              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+              variants={bodyAnimation}
             >
-              <AnimatedTitle
-                text={"IG"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
-            <Link
-              href="https://mateusloubach.hashnode.dev/"
-              target="_blank"
-              aria-label="View Hashnode Profile"
-            >
-              <AnimatedTitle
-                text={"HN"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
+              <FaInstagram size={46} />
+            </motion.p>
+          </Link>
+
           </div>
         </div>
       </div>

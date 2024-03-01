@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
 import profile from "../../public/profile.png";
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -19,7 +20,7 @@ const Hero = () => {
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         <div>
           <Link
-            href="https://drive.google.com/file/d/1SF6YrDn-Xr53JNxsRVZcMvhjOMpS-HMA/view"
+            href="https://drive.google.com/file/d/1vbTZJ0ZdOxZdgR3YwqZU5nBHzDzl_NNR/view"
             target="_blank"
             aria-label="View Resume"
           >
@@ -42,7 +43,7 @@ const Hero = () => {
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}
             >
-              GH
+              <FaGithub size={32} />
             </motion.p>
           </Link>
           <Link
@@ -54,7 +55,7 @@ const Hero = () => {
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}
             >
-              LN
+              <FaLinkedin size={32} />
             </motion.p>
           </Link>
           <Link
@@ -66,7 +67,7 @@ const Hero = () => {
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}
             >
-              TW
+              <FaTwitter size={32} />
             </motion.p>
           </Link>
         </div>
@@ -90,7 +91,7 @@ const Hero = () => {
               alt="My profile Picture"
               data-blobity-tooltip=" "
               data-blobity-invert="false"
-              className=" w-[150px] rounded-[16px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[32px] lg:w-[245px]"
+              className="mt-[165px] w-[150px] rounded-[16px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[32px] lg:w-[245px]"
             />
           </motion.div>
         </div>

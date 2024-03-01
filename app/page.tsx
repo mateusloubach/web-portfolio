@@ -36,17 +36,27 @@ export default function Home() {
     <>
       <PreLoader />
 
-      <NavBar />
+      {window.innerWidth >= 1024 && <NavBar />}
 
-      {/* <ScrollerMotion> */}
-      <main className="flex flex-col items-center justify-center">
-        <Hero />
-        <Work />
-        <About />
-        <Contact />
-        <Footer />
-      </main>
-      {/* </ScrollerMotion> */}
+      {window.innerWidth >= 1024 ? (
+        <ScrollerMotion>
+          <main className="flex flex-col items-center justify-center">
+            <Hero />
+            <Work />
+            <About />
+            <Contact />
+            <Footer />
+          </main>
+        </ScrollerMotion>
+      ) : (
+        <main className="flex flex-col items-center justify-center">
+          <Hero />
+          <Work />
+          <About />
+          <Contact />
+          <Footer />
+        </main>
+      )}
     </>
   );
 }
