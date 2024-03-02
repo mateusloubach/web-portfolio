@@ -6,7 +6,6 @@ import { ScrollerMotion } from "scroller-motion";
 import PreLoader from "./animations/PreLoader/PreLoader";
 import { initialBlobityOptions } from "./utils/BlobityConfig";
 import NavBar from "./navbar/NavBar";
-
 import dynamic from "next/dynamic";
 const Work = dynamic(() => import("./work-section/Work"));
 const About = dynamic(() => import("./about-section/About"));
@@ -22,23 +21,16 @@ export default function Home() {
     }
   }, [blobityInstance]);
 
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-    });
-  }, []);
-
-
-
+  if (typeof window === "undefined") {
+    return null;
+  }
   return (
     <>
       <PreLoader />
 
-      {window.innerWidth >= 1024 && <NavBar />}
+      {typeof window !== "undefined" && window.innerWidth > 1024 && <NavBar />}
 
-      {window.innerWidth >= 1024 ? (
+      {window.innerWidth > 1024 ? (
         <ScrollerMotion>
           <main className="flex flex-col items-center justify-center">
             <Hero />

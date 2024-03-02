@@ -10,7 +10,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const Hero = () => {
   return (
     <motion.section
-      className="relative z-10 flex h-[80vh] w-full items-stretch justify-center bg-[url('.//../public/hero2.jpg')] bg-cover  bg-center py-0 sm:h-[90vh]  md:h-[100vh]"
+      className="relative z-10 py-0 flex h-screen w-full items-stretch justify-center bg-[url('.//../public/hero2.jpg')] bg-cover bg-center"
       id="home"
       initial="initial"
       animate="animate"
@@ -25,7 +25,7 @@ const Hero = () => {
             aria-label="View Resume"
           >
             <motion.button
-              className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block  md:text-[16px] lg:block"
+              className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block md:text-[16px] lg:block"
               variants={bodyAnimation}
             >
               VIEW RESUME
