@@ -27,8 +27,8 @@ export default function Home() {
   return (
     <>
       <PreLoader />
-
-      {typeof window !== "undefined" && window.innerWidth > 1024 && <NavBar />}
+      {/* <NavBar /> */}
+      {typeof window !== "undefined" && window.innerWidth > 1024}
 
       {window.innerWidth > 1024 ? (
         <ScrollerMotion>
