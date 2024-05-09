@@ -22,7 +22,8 @@ const ProjectCard = ({
     <motion.div
       style={
         {
-          backgroundColor: "#212531",
+          // backgroundColor: "#212531",
+          backgroundColor: "#18181b",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",

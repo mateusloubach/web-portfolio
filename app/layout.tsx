@@ -13,7 +13,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Mateus Loubach — Software Engineer",
   description:
-    "Frontend Engineer and Product Designer, currently at Alternativa Agency. Focused on interfaces and experiences, working remotely from Belo Horizonte, Brazil.",
+    "Software Engineer and Product Designer, currently at Alternativa Agency. Focused on interfaces and experiences, working remotely from Belo Horizonte, Brazil.",
   generator: "Next.js",
   applicationName: "Mateus Loubach",
   keywords: [
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "developer",
     "freelance developer",
     "frontend",
-    "react",
     "frontend developer",
     "frontend engineer",
+    "react", "react developer", "next developer", "next.js developer", "next.js", 
     "creative",
     "creative developer",
     "creative engineer",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mateus Loubach | Software Engineer",
     description:
-      "Frontend Engineer and Product Designer, currently at Alternativa Agency. Focused on interfaces and experiences, working remotely from Belo Horizonte, Brazil.",
-    url: "https://www.mateusloubach.github.io",
-    siteName: "mateusloubach.github.io",
+      "Software Engineer and Product Designer, currently at Alternativa Agency. Focused on interfaces and experiences, working remotely from Belo Horizonte, Brazil.",
+    url: "https://www.mateusloubach.tech",
+    siteName: "mateusloubach.tech",
     images: [
       {
         url: "https://avatars.githubusercontent.com/u/53960269?s=400&u=4c0382b009d1fa906186b7ced2915a11f104d395&v=4",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mateus Loubach — Software Engineer",
     description:
-      "Frontend Engineer and Product Designer, currently at Crown Branding Agency. Focused on interfaces and experiences, working remotely from BH, Brazil.",
+      "Software Engineer and Product Designer, currently at Crown Branding Agency. Focused on interfaces and experiences, working remotely from BH, Brazil.",
     creator: "mateusloubach",
     creatorId: "1243720976552144897",
     images: [

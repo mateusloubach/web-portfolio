@@ -12,14 +12,14 @@ export type ProjectProps = {
 export const devProjects = [
   {
     id: 0,
-    name: "CarPool",
+    name: "anxiety",
     description:
-      "CarPool is an aplication that allows you to locate and connect to people that want to reach the same destination. It allows you to reach via map and locate possible drivers that have the same goal.",
+      "AnxietyX is the next step of social media focused on real human beings. It's upgrades will be revealed soon.",
     technologies: ["Next.js", "Typescript", "Prisma"],
     github: "https://github.com/mateusloubach",
-    demo: "https://github.com/mateusloubach",
-    image: require(".//../../public/projects/pkmup.png"),
-    available: false,
+    demo: "https://anxiety-x.vercel.app/",
+    image: require(".//../../public/projects/anxietyx.png"),
+    available: true,
   },
 
   {
@@ -29,44 +29,33 @@ export const devProjects = [
       "Barbershop is a we application that allows you to book appointments, view the studio's services , and get in touch with the studio.",
     technologies: ["NextJs", "Typescript", "Prisma"],
     github: "https://github.com/mateusloubach",
-    demo: "https://web-barbershops.vercel.app",
+    demo: "https://app-barbershops.vercel.app/",
     image: require(".//../../public/projects/barbershop.png"),
     available: true,
   },
 
   {
     id: 2,
-    name: "Tattoo Studio",
+    name: "PkmUp",
     description:
-      "A Tattoo Studio website that allows users to book appointments, view the studio's portfolio, and get in touch with the studio.",
-    technologies: ["Typescript", "CSS", "Framer"],
+      "PkmUp is an app that allows you to locate and connect to people that want to reach the same destination.",
+    technologies: ["NextJs", "Typescript", "Prisma"],
     github: "https://github.com/mateusloubach/",
-    demo: "https://wazowskitattoo.framer.ai/",
-    image: require(".//../../public/projects/tattooshop.png"),
-    available: true,
+    demo: "",
+    image: require("../../public/projects/pkmup.png"),
+    available: false,
   },
   // {
   //   id: 3,
-  //   name: "Carpooling Service",
+  //   name: "PkmUp",
   //   description:
-  //     "TMTM helps Covenant University students find fellow students who are headed to the same location, so they can share a ride and split the cost.",
-  //   technologies: ["Material UI", "React", "Formik"],
-  //   github: "https://github.com/victorcodess/carpooling-service",
+  //     "PkmUp is an app that allows you to locate and connect to people that want to reach the same destination.",
+  //   technologies: ["Next.js", "Next Auth", "Tailwind CSS"],
+  //   github: "https://github.com/msp-nigeria/mlsc.ng-frontend",
   //   demo: "",
-  //   image: require(".//../../public/projects/carpool-new.webp"),
+  //   image: require("../../public/projects/pkmup.png"),
   //   available: false,
   // },
-  {
-    id: 5,
-    name: "././glossary",
-    description:
-      "Glossary is a public developer dictionary contaning a large library of content that helps and provides information regarding .",
-    technologies: ["Next.js", "Next Auth", "Tailwind CSS"],
-    github: "https://github.com/msp-nigeria/mlsc.ng-frontend",
-    demo: "",
-    image: require(".//../../public/projects/glossary.png"),
-    available: false,
-  },
 ];
 
 export const designProjects = [

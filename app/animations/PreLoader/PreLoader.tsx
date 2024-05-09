@@ -15,7 +15,7 @@ const PreLoader = () => {
         <span>Define,</span>
         <span>Develop,</span>
         <span>Deliver</span>
-        <div className="sub hidden"></div>
+        <span className="sub hidden"></span>
       </div>
     </div>
   );
