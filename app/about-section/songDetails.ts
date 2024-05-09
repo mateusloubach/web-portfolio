@@ -27,7 +27,7 @@ export const songs = [
   {
     title: "clockUi",
     artist: "Mateus Loubach",
-    image: require("../../public/songs/clockui.png"),
+    image: require("../../public/songs/clock.png"),
     link: "https://tool-clock.netlify.app/",
   },
   {
