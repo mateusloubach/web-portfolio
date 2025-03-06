@@ -12,25 +12,24 @@ export type ProjectProps = {
 export const devProjects = [
   {
     id: 0,
-    name: "anxiety",
+    name: "SaasLanding",
     description:
-      "AnxietyX is the next step of social media focused on real human beings. It's upgrades will be revealed soon.",
-    technologies: ["Next.js", "Typescript", "Prisma"],
+      "Empower Yourself with Excellence – Track your progress, stay motivated, and celebrate your achievements with our innovative app.",
+    technologies: ["Next.js", "Typescript", "TailwindCSS"],
     github: "https://github.com/mateusloubach",
-    demo: "https://anxiety-x.vercel.app/",
-    image: require(".//../../public/projects/anxietyx.png"),
+    demo: "https://saas-landing-alpha.vercel.app/",
+    image: require(".//../../public/projects/frame14.png"),
     available: true,
   },
-
   {
     id: 1,
-    name: "barberShop",
+    name: "anxietyX",
     description:
-      "Barbershop is a we application that allows you to book appointments, view the studio's services , and get in touch with the studio.",
-    technologies: ["NextJs", "Typescript", "Prisma"],
+      "Empower Yourself with Excellence – Track your progress, stay motivated, and celebrate your achievements with our innovative app.",
+    technologies: ["NextJs", "Typescript", "Appwrite"],
     github: "https://github.com/mateusloubach",
-    demo: "https://app-barbershops.vercel.app/",
-    image: require(".//../../public/projects/barbershop.png"),
+    demo: "https://anxiety-x.vercel.app/",
+    image: require(".//../../public/projects/lanxietyx.png"),
     available: true,
   },
 
