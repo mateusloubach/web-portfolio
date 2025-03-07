@@ -19,18 +19,18 @@ const Hero = () => {
 
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         <div>
-          <Link
+            <Link className="pointer-events-none"
             href="https://drive.google.com/file/d/1vbTZJ0ZdOxZdgR3YwqZU5nBHzDzl_NNR/view"
             target="_blank"
             aria-label="View Resume"
-          >
+            >
             <motion.button
               className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block md:text-[16px] lg:block"
               variants={bodyAnimation}
             >
               VIEW RESUME
             </motion.button>
-          </Link>
+            </Link>
         </div>
 
         <div className="flex gap-10 text-[#e4ded7] sm:gap-12 md:gap-14 lg:gap-14">

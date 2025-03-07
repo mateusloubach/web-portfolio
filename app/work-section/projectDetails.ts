@@ -18,7 +18,7 @@ export const devProjects = [
     technologies: ["Next.js", "Typescript", "TailwindCSS"],
     github: "https://github.com/mateusloubach",
     demo: "https://saas-landing-alpha.vercel.app/",
-    image: require(".//../../public/projects/frame14.png"),
+    image: require(".//../../public/projects/frame11.png"),
     available: true,
   },
   {
