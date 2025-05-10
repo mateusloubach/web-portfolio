@@ -29,7 +29,7 @@ export const devProjects = [
     technologies: ["ViteJs", "Typescript", "ReactJs"],
     github: "https://github.com/mateusloubach/",
     demo: "https://cloudaionbase.eth.limo",
-    image: require("../../public/projects/cloudair.png"),
+    image: require("../../public/projects/CloudAI.png"),
     available: true,
   },
   {
