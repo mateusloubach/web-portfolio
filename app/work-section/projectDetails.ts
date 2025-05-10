@@ -23,26 +23,25 @@ export const devProjects = [
   },
   {
     id: 1,
-    name: "anxietyX",
+    name: "CloudAI",
+    description:
+    "CloudAI is a decentralized nation where AI and humans work together. AI agents automate tasks, provide services, and interact across platforms.",
+    technologies: ["ViteJs", "Typescript", "ReactJs"],
+    github: "https://github.com/mateusloubach/",
+    demo: "https://cloudaionbase.eth.limo",
+    image: require("../../public/projects/cloudair.png"),
+    available: true,
+  },
+  {
+    id: 2,
+    name: "AnxietyX",
     description:
       "Empower Yourself with Excellence – Track your progress, stay motivated, and celebrate your achievements with our innovative app.",
     technologies: ["NextJs", "Typescript", "Appwrite"],
     github: "https://github.com/mateusloubach",
     demo: "https://anxiety-x.vercel.app/",
-    image: require(".//../../public/projects/lanxietyx.png"),
+    image: require(".//../../public/projects/anxietyx.png"),
     available: true,
-  },
-
-  {
-    id: 2,
-    name: "PkmUp",
-    description:
-      "PkmUp is an app that allows you to locate and connect to people that want to reach the same destination.",
-    technologies: ["NextJs", "Typescript", "Prisma"],
-    github: "https://github.com/mateusloubach/",
-    demo: "",
-    image: require("../../public/projects/pkmup.png"),
-    available: false,
   },
   // {
   //   id: 3,
