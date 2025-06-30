@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
 import profile from "../../public/profile.png";
+import mateusloubach from "../../public/mateusloubach.png";
 import alternativa from "../../public/alternativalogo.png";
 
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
@@ -89,12 +90,12 @@ const Hero = () => {
             variants={imageAnimation}
           >
             <Image
-              src={profile}
+              src={mateusloubach}
               priority
               alt="My profile Picture"
               data-blobity-tooltip=" "
               data-blobity-invert="false"
-              className="mt-[165px] w-[150px] rounded-[16px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[32px] lg:w-[245px]"
+              className="mt-[165px] w-[150px] rounded-[32px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[72px] lg:w-[155px]"
             />
           </motion.div>
         </div>
