@@ -1,52 +1,41 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Syne } from "@next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
+export const viewport: Viewport = { colorScheme: "dark" };
+
 const syne = Syne({
   subsets: ["latin"],
-  display: "block",
+  display: "swap",
+  variable: "--font-syne",
   weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "Mateus Loubach — Software Engineer",
+  metadataBase: new URL("https://mateusloubach.vercel.app"),
+  title: "Mateus Loubach — Software Engineering, Systems & AI",
   description:
-    "Software Engineer and Product Designer, currently at Alternativa Agency. Focused on interfaces and experiences, working remotely from Belo Horizonte, Brazil.",
-  generator: "Next.js",
+    "Mateus Loubach helps professionals and companies turn unclear digital problems into websites, software, systems, and AI agents that move the business forward.",
   applicationName: "Mateus Loubach",
   keywords: [
-    "freelance",
-    "developer",
-    "freelance developer",
-    "frontend",
-    "frontend developer",
-    "frontend engineer",
-    "react", "react developer", "next developer", "next.js developer", "next.js", 
-    "creative",
-    "creative developer",
-    "creative engineer",
-    "tech",
-    "software",
-    "software developer",
-    "portfolio",
-    "frontend developer portfolio",
-    "creative developer portfolio",
+    "software engineer", "technology consultant", "AI agents", "agentic platforms",
+    "custom software", "business systems", "digital strategy", "React developer",
+    "TypeScript developer", "Belo Horizonte",
   ],
-  colorScheme: "dark",
   openGraph: {
-    title: "Mateus Loubach | Software Engineer",
+    title: "Mateus Loubach — Software Engineering, Systems & AI",
     description:
-      "Software Engineer and Product Designer, currently at Alternativa Agency. Focused on interfaces and experiences, working remotely from Belo Horizonte, Brazil.",
-    url: "https://www.mateusloubach.tech",
-    siteName: "mateusloubach.tech",
+      "Software engineering and technology consulting for professionals and companies with difficult digital problems.",
+    url: "https://mateusloubach.vercel.app",
+    siteName: "Mateus Loubach",
     images: [
       {
-        url: "https://avatars.githubusercontent.com/u/53960269?s=400&u=4c0382b009d1fa906186b7ced2915a11f104d395&v=4",
-        width: 1200,
-        height: 630,
-        alt: "Mateus Loubach — Software Engineer",
+        url: "/hero-kieai.jpg",
+        width: 1520,
+        height: 656,
+        alt: "Abstract connected systems architecture",
       },
     ],
     locale: "en-US",
@@ -54,27 +43,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mateus Loubach — Software Engineer",
-    description:
-      "Software Engineer and Product Designer, currently at Crown Branding Agency. Focused on interfaces and experiences, working remotely from BH, Brazil.",
+    title: "Mateus Loubach — Software Engineering, Systems & AI",
+    description: "Turning unclear digital problems into websites, software, systems, and AI agents.",
     creator: "mateusloubach",
     creatorId: "1243720976552144897",
     images: [
-      "https://avatars.githubusercontent.com/u/53960269?s=400&u=4c0382b009d1fa906186b7ced2915a11f104d395&v=4",
+      "/hero-kieai.jpg",
     ],
   },
   robots: {
     index: true,
     follow: true,
     nocache: false,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
   category: "technology",
 };
@@ -86,9 +66,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body
-        className={`${syne.className} scroll-smooth scrollbar-thin scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
-      >
+      <body className={`${syne.className} ${syne.variable}`}>
         {children}
         <Analytics />
       </body>
