@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@theme {
+  --color-site-background: #0B0C0A;
+}
 
 @layer base {
   h1 {
@@ -35,5 +38,13 @@ body {
 }
 
 body {
+  background: var(--color-site-background);
   overflow-y: hidden;
+}
+
+@media (hover: hover) {
+  /* Blobity appends its cursor canvas directly to the body. */
+  body:has([data-cursor-contrast]:hover) > canvas {
+    mix-blend-mode: difference;
+  }
 }

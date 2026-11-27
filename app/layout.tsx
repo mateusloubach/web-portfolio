@@ -1,16 +1,34 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import type { Metadata } from "next";
-import { Syne } from "@next/font/google";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
+import { headers } from "next/headers";
+import { LocaleProvider } from "./LocaleProvider";
+import { isLocale } from "./locale";
 
-const syne = Syne({
-  subsets: ["latin"],
+const syne = localFont({
+  src: "./fonts/Syne.ttf",
   display: "block",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: "400 800",
 });
 
-export const metadata: Metadata = {
+export const viewport: Viewport = {
+  colorScheme: "dark",
+};
+
+const siteMetadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon-dark.svg", type: "image/svg+xml", sizes: "any" },
+      {
+        url: "/favicon-light.svg",
+        type: "image/svg+xml",
+        sizes: "any",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
   title: "Mateus Loubach — Software Engineer",
   description:
     "Software Engineer and Product Designer, currently at Alternativa Agency. Focused on interfaces and experiences, working remotely from Belo Horizonte, Brazil.",
@@ -34,7 +52,6 @@ export const metadata: Metadata = {
     "frontend developer portfolio",
     "creative developer portfolio",
   ],
-  colorScheme: "dark",
   openGraph: {
     title: "Mateus Loubach | Software Engineer",
     description:
@@ -79,17 +96,57 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+async function getLocale() {
+  const locale = (await headers()).get("x-portfolio-locale") ?? undefined;
+  return isLocale(locale) ? locale : "en";
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const portuguese = locale === "pt-br";
+  const title = portuguese
+    ? "Mateus Loubach — Engenheiro de Software e Arquiteto de Soluções"
+    : "Mateus Loubach — Software Engineer & Solutions Architect";
+  const description = portuguese
+    ? "Engenharia de software, arquitetura de soluções e automação com IA, a partir de Belo Horizonte, Brasil."
+    : "Software engineering, solutions architecture, and AI automation from Belo Horizonte, Brazil.";
+  const url = `https://www.mateusloubach.tech/${locale}`;
+
+  return {
+    ...siteMetadata,
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        en: "https://www.mateusloubach.tech/en",
+        "pt-BR": "https://www.mateusloubach.tech/pt-br",
+        "x-default": "https://www.mateusloubach.tech/",
+      },
+    },
+    openGraph: {
+      ...siteMetadata.openGraph,
+      title,
+      description,
+      url,
+      locale: portuguese ? "pt_BR" : "en_US",
+    },
+    twitter: { ...siteMetadata.twitter, title, description },
+  };
+}
+
 type RootLayoutProps = {
   children: ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const locale = await getLocale();
   return (
-    <html lang="en">
+    <html lang={locale === "pt-br" ? "pt-BR" : "en"}>
       <body
-        className={`${syne.className} scroll-smooth scrollbar-thin scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
+        className={`${syne.className} scroll-smooth scrollbar-thin scrollbar-track-site-background scrollbar-thumb-[#212531]`}
       >
-        {children}
+        <LocaleProvider locale={locale}>{children}</LocaleProvider>
         <Analytics />
       </body>
     </html>

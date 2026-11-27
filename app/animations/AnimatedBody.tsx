@@ -49,18 +49,15 @@ export default function AnimatedBody({
       transition: {
         delay: 0.1,
         duration: 1,
-        ease: [0.2, 0.65, 0.3, 0.9],
+        ease: [0.2, 0.65, 0.3, 0.9] as const,
       },
     },
   };
 
   return (
     <motion.p
-      aria-label={text}
-      role="heading"
       className={className}
       ref={ref}
-      aria-hidden="true"
       initial="hidden"
       animate={ctrls}
       variants={bodyAnimation}

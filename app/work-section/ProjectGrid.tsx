@@ -34,10 +34,12 @@ const ProjectGrid = () => {
               key={project.id}
               name={project.name}
               description={project.description}
+              descriptionPt={project.descriptionPt}
               technologies={project.technologies}
               github={project.github}
               demo={project.demo}
               image={project.image}
+              mobileImage={project.mobileImage}
               available={project.available}
             />
           ))}

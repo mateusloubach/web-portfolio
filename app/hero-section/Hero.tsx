@@ -4,125 +4,188 @@ import { Mattone } from "../fonts/Mattone/Mattone";
 import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
-import profile from "../../public/profile.png";
-import mateusloubach from "../../public/mateusloubach.png";
-import alternativa from "../../public/alternativalogo.png";
+import portrait from "../../public/hero-portrait.png";
+import { useCopy, useLocale } from "../LocaleProvider";
+import { localeCookie, locales } from "../locale";
 
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { SiKofi, SiPatreon } from "react-icons/si";
 
 const Hero = () => {
+  const copy = useCopy();
+  const locale = useLocale();
   return (
     <motion.section
-      className="relative z-10 py-0 flex h-screen w-full items-stretch justify-center bg-[url('.//../public/hero2.jpg')] bg-cover bg-center"
+      className="relative z-10 w-full bg-site-background"
       id="home"
       initial="initial"
       animate="animate"
     >
-      <motion.div className="absolute left-0 top-0 right-0 bottom-0 h-full w-full bg-[#0E1016] mix-blend-color"></motion.div>
-
-      <div className="absolute top-10 flex justify-center sm:w-[90%] lg:max-w-[1440px]">
-        {/* <div>
-            <Link className="pointer-events-none"
-            href="https://api.whatsapp.com/send/?phone=5511942393021"
-            target="_blank"
-            aria-label="View Resume"
+      <div className="relative mx-auto grid min-h-svh w-[90%] max-w-[1440px] grid-rows-[auto_1fr_auto] gap-8 py-6 md:py-9">
+        <header className="flex items-center justify-between gap-3">
+          <nav
+            aria-label={copy("Language", "Idioma")}
+            className="shrink-0"
+          >
+            <div className="inline-flex items-center gap-1 rounded-full border border-[#e4ded7]/25 bg-site-background/40 p-1 text-xs font-semibold text-[#e4ded7]">
+              {locales.map((language) => (
+                <a
+                  key={language}
+                  data-cursor-contrast
+                  href={"/" + language}
+                  hrefLang={language}
+                  lang={language}
+                  aria-label={
+                    language === "en" ? "English" : "Português do Brasil"
+                  }
+                  aria-current={locale === language ? "page" : undefined}
+                  className={
+                    locale === language
+                      ? "rounded-full bg-[#e4ded7] px-2.5 py-1.5 text-site-background"
+                      : "rounded-full px-2.5 py-1.5 hover:bg-white/10"
+                  }
+                  onClick={() => {
+                    const secure =
+                      location.protocol === "https:" ? "; Secure" : "";
+                    document.cookie =
+                      localeCookie +
+                      "=" +
+                      language +
+                      "; Path=/; Max-Age=31536000; SameSite=Lax" +
+                      secure;
+                  }}
+                >
+                  {language === "en" ? "EN" : "PT"}
+                </a>
+              ))}
+            </div>
+          </nav>
+          <div className="flex shrink-0 items-center gap-3 text-[#e4ded7] sm:gap-8 lg:gap-12">
+            <Link
+              data-cursor-contrast
+              href="https://www.integr.com.br/"
+              target="_blank"
+              aria-label={copy("Visit Integr", "Visitar a Integr")}
             >
-            <motion.button
-              className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block md:text-[16px] lg:block"
-              variants={bodyAnimation}
-            >
-              MESSAGE
-            </motion.button>
+              <motion.p
+                className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+                variants={bodyAnimation}
+              >
+                <Image src="/integr.svg" width={32} height={32} alt="" />
+              </motion.p>
             </Link>
-        </div> */}
+            <Link
+              data-cursor-contrast
+              href="https://ko-fi.com/mateusloubach"
+              target="_blank"
+              aria-label={copy(
+                "Support me on Ko-fi",
+                "Apoie meu trabalho no Ko-fi",
+              )}
+            >
+              <motion.p
+                className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+                variants={bodyAnimation}
+              >
+                <SiKofi size={32} />
+              </motion.p>
+            </Link>
+            <Link
+              data-cursor-contrast
+              href="https://www.patreon.com/cw/mateusloubach"
+              target="_blank"
+              aria-label={copy(
+                "Support me on Patreon",
+                "Apoie meu trabalho no Patreon",
+              )}
+            >
+              <motion.p
+                className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+                variants={bodyAnimation}
+              >
+                <SiPatreon size={32} />
+              </motion.p>
+            </Link>
+            <Link
+              data-cursor-contrast
+              href="https://www.linkedin.com/in/mateusloubach/"
+              target="_blank"
+              aria-label={copy(
+                "View LinkedIn Profile",
+                "Ver perfil no LinkedIn",
+              )}
+            >
+              <motion.p
+                className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+                variants={bodyAnimation}
+              >
+                <FaLinkedin size={32} />
+              </motion.p>
+            </Link>
+          </div>
+        </header>
 
-        <div className="flex gap-10 text-[#e4ded7] sm:gap-12 md:gap-14 lg:gap-14">
-          <Link
-            href="https://github.com/mateusloubach"
-            target="_blank"
-            aria-label="View GitHub Profile"
-          >
-            <motion.p
-              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-              variants={bodyAnimation}
-            >
-              <FaGithub size={32} />
-            </motion.p>
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/mateusloubach/"
-            target="_blank"
-            aria-label="View LinkedIn Profile"
-          >
-            <motion.p
-              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-              variants={bodyAnimation}
-            >
-              <FaLinkedin size={32} />
-            </motion.p>
-          </Link>
-          <Link
-            href="https://twitter.com/mcesarloubach"
-            target="_blank"
-            aria-label="View Twitter Profile"
-          >
-            <motion.p
-              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-              variants={bodyAnimation}
-            >
-              <FaXTwitter size={32} />
-            </motion.p>
-          </Link>
-        </div>
-      </div>
-
-      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40 ">
         <div
-          className={`relative flex flex-col items-center justify-center ${Mattone.className}   `}
+          className={`flex flex-col items-center justify-center gap-5 ${Mattone.className}`}
         >
           <AnimatedWords
             title="MATEUS LOUBACH"
             style="inline-block overflow-hidden pt-1 -mr-4 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
           />
           <motion.div
-            className="absolute bottom-[-110px] mx-auto sm:bottom-[-100px] md:bottom-[-130px] lg:bottom-[-150px]"
+            className="relative overflow-hidden rounded-t-[36%] rounded-b-3xl [mask-image:linear-gradient(to_bottom,black_82%,transparent_100%)]"
             variants={imageAnimation}
           >
             <Image
-              src={mateusloubach}
+              src={portrait}
               priority
-              alt="My profile Picture"
-              data-blobity-tooltip=" "
-              data-blobity-invert="false"
-              className="mt-[165px] w-[150px] rounded-[32px] grayscale hover:grayscale-0 md:w-[200px] md:rounded-[72px] lg:w-[155px]"
+              alt={copy(
+                "Portrait of Mateus Loubach",
+                "Retrato de Mateus Loubach",
+              )}
+              sizes="(min-width: 1024px) 175px, 150px"
+              className="aspect-[4/5] w-[150px] object-cover object-top brightness-110 saturate-75 lg:w-[175px]"
             />
           </motion.div>
         </div>
-      </div>
 
-      <div
-        className="absolute bottom-10 flex items-center 
-      justify-center
-      md:bottom-10 lg:w-[90%] lg:max-w-[1440px] lg:justify-between"
-      >
-        <motion.div
-          className="  max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
-          variants={bodyAnimation}
-        >
-          <p className="z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left">
-            Software Engineer and Product Designer, Currently available for work.
-          </p>
-        </motion.div>
+        <div className="grid text-center text-base leading-normal text-[#e4ded7] md:text-xl lg:grid-cols-2 lg:gap-x-6 lg:gap-y-2 lg:text-[clamp(1rem,1.4vw,1.25rem)]">
+          <motion.div
+            className="mx-auto max-w-[420px] font-medium lg:row-span-2 lg:mx-0 lg:grid lg:max-w-none lg:grid-rows-subgrid lg:text-left"
+            variants={bodyAnimation}
+          >
+            <p>
+              {copy(
+                "Software Engineer & Solutions Architect",
+                "Engenheiro de Software e Arquiteto de Soluções",
+              )}
+            </p>
+            <p className="mt-2 lg:mt-0">
+              <span className="inline-block border-b border-[#e4ded7]/50 pb-1">
+                {copy("Available", "Disponível")}
+              </span>{" "}
+              {copy("for work", "para trabalhar")}
+            </p>
+          </motion.div>
 
-        <motion.div
-          className="  hidden max-w-[500px] lg:block lg:max-w-[420px]"
-          variants={bodyAnimation}
-        >
-          <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
-            Focused on Scalable Systems, UI/UX, remotely from Belo Horizonte - Brasil.
-          </p>
-        </motion.div>
+          <motion.div
+            className="hidden text-right font-semibold lg:row-span-2 lg:grid lg:grid-rows-subgrid"
+            variants={bodyAnimation}
+          >
+            <p>
+              {copy(
+                "I build software teams can ship and maintain.",
+                "Crio software que equipes podem entregar e manter.",
+              )}
+            </p>
+            <p>
+              {copy(
+                "Working remotely from Belo Horizonte - Brasil",
+                "Trabalho remoto a partir de Belo Horizonte - Brasil",
+              )}
+            </p>
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   );

@@ -1,0 +1,56 @@
+.preview {
+  aspect-ratio: 1.6;
+  perspective: 900px;
+}
+
+.desktop,
+.phone {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 24%);
+  background: #19191b;
+}
+
+.desktop {
+  bottom: 8%;
+  left: 3%;
+  width: 86%;
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 35%);
+  transform: rotateY(9deg) rotateZ(-4deg);
+}
+
+.phone {
+  right: 5%;
+  bottom: 2%;
+  width: 28%;
+  padding: 1%;
+  border-radius: 12% / 6%;
+  box-shadow: -8px 12px 24px rgb(0 0 0 / 50%);
+  transform: rotateY(-10deg) rotateZ(7deg);
+}
+
+.desktop img,
+.phone img {
+  display: block;
+  width: 100%;
+}
+
+.phone img {
+  border-radius: 9% / 4.5%;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .desktop,
+  .phone {
+    transition: transform 350ms ease-out;
+  }
+
+  .preview:hover .desktop {
+    transform: translateY(-3%) rotateY(5deg) rotateZ(-5deg);
+  }
+
+  .preview:hover .phone {
+    transform: translate(4%, -6%) rotateY(-5deg) rotateZ(9deg);
+  }
+}

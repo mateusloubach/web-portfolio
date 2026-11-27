@@ -36,7 +36,7 @@ const AnimatedWords: React.FC<AnimatedWordsProps> = ({ title, style }) => {
       y: 0,
       transition: {
         delay: 6,
-        ease: [0.2, 0.65, 0.3, 0.9],
+        ease: [0.2, 0.65, 0.3, 0.9] as const,
         duration: 1,
       },
     },
@@ -55,7 +55,7 @@ const AnimatedWords: React.FC<AnimatedWordsProps> = ({ title, style }) => {
     <h1 aria-label={title} role="heading">
       <motion.span
         ref={ref}
-        className="flex max-w-[500px] flex-col overflow-hidden text-center text-[67px] font-extrabold leading-[0.8em] text-[#e4ded7] sm:text-[90px] sm:leading-[0.85em] md:max-w-[900px] md:text-[155.5px] lg:text-[164px]"
+        className="flex flex-col overflow-hidden text-center text-[clamp(2.6rem,11.5vw,9rem)] font-extrabold leading-[0.85em] text-[#e4ded7]"
       >
         {title.split(" ").map((word, index) => (
           <motion.div

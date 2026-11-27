@@ -4,7 +4,7 @@ export const initialBlobityOptions = {
     focusableElementsOffsetY: 5,
     color: "#e4ded7",
     dotColor: "#0e1016",
-    invert: true,
+    invert: false,
     focusableElements:
       "[data-blobity], a:not([data-no-blobity]), h4:not([data-no-blobity]), li:not([data-no-blobity]), button:not([data-no-blobity]), [data-blobity-tooltip]",
     font: "'Montserrat','Source Sans Pro',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif",
@@ -16,4 +16,4 @@ export const initialBlobityOptions = {
     size: 40,
     radius: 4,
     magnetic: true,
-  }  
+  };

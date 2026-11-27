@@ -15,7 +15,7 @@
   animation-play-state: paused;
 }
 
-@screen sm {
+@media (min-width: 40rem) {
   @keyframes marquee {
     0% {
       left: 0;
@@ -30,7 +30,7 @@
   }
 }
 
-@screen md {
+@media (min-width: 48rem) {
   @keyframes marquee {
     0% {
       left: 0;
@@ -45,7 +45,7 @@
   }
 }
 
-@screen lg {
+@media (min-width: 64rem) {
   @keyframes marquee {
     0% {
       left: 0;
@@ -60,7 +60,7 @@
   }
 }
 
-@screen xl {
+@media (min-width: 80rem) {
   @keyframes marquee {
     0% {
       left: 0;
