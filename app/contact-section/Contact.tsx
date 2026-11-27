@@ -1,3 +1,4 @@
+import { useCopy } from "../LocaleProvider";
 import Link from "next/link";
 import Image from "next/image";
 import { monaSans } from "../fonts/monaSans/monaSans";
@@ -8,14 +9,15 @@ import AnimatedWords2 from "../animations/AnimatedWords2";
 import { motion } from "framer-motion";
 import heartIcon from "../../public/heart icon.png";
 import { Mattone } from "../fonts/Mattone/Mattone";
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { SiKofi, SiPatreon } from "react-icons/si";
 import { bodyAnimation } from "../animations/animations";
 
 const Contact = () => {
+  const copy = useCopy();
   return (
     <motion.section
-      className="relative z-10 flex h-[85vh] w-full items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center py-16 md:h-[80vh] md:py-20 lg:h-[90vh] lg:pt-0 lg:pb-28"
+      className="relative z-10 flex w-full items-center justify-center overflow-hidden bg-site-background pt-16 pb-10 md:pt-20 md:pb-12"
       id="contact"
       initial="initial"
       animate="animate"
@@ -25,10 +27,9 @@ const Contact = () => {
           className={`flex flex-col items-start justify-center ${Mattone.className} relative w-full sm:items-center lg:max-w-[1440px] `}
         >
           <AnimatedWords2
-            title={"Let's Talk"}
+            title={copy("Let's Talk", "Vamos conversar")}
             style={
-              "flex max-w-[500px] flex-col items-start text-left text-[110px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[170px] md:text-[200px] lg:text-center lg:text-[170px] xl:text-[220px]"
-              //MONA_SANS: "flex max-w-[500px] flex-col items-start text-left text-[150px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[170px] md:text-[200px] lg:text-center lg:text-[270px] xl:text-[390px]"
+              "flex flex-wrap justify-center gap-x-[0.22em] text-center text-[clamp(2.25rem,9vw,9rem)] font-extrabold uppercase leading-none text-[#e4ded7]"
             }
           />
           {/* <Image
@@ -38,12 +39,13 @@ const Contact = () => {
           /> */}
         </div>
 
-        <div className="mt-20 flex w-full flex-col items-end justify-center gap-16 sm:mt-32 sm:gap-12 md:mt-40 md:flex-row md:items-start md:justify-between lg:mt-12 lg:max-w-[1440px]">
+        <div className="mt-10 flex w-full flex-wrap items-end justify-between gap-7 md:mt-12 md:items-start lg:max-w-[1440px]">
           <div className=" flex w-[350px] max-w-[90%] flex-col items-end text-right text-[14px] font-semibold uppercase text-[#e4ded7] sm:w-[350px] sm:text-[14px] md:w-[310px] md:items-start md:text-left md:text-[16px] lg:w-[420px] lg:text-[16px]">
             <AnimatedBody
-              text={
-                "Got a question, proposal, project, or want to work together on something?"
-              }
+              text={copy(
+                "Got a question, proposal, project, or want to work together on something?",
+                "Tem uma dúvida, uma proposta ou um projeto? Vamos trabalhar juntos?",
+              )}
               className={
                 "-mb-1 inline-block overflow-hidden pt-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
               }
@@ -55,32 +57,73 @@ const Contact = () => {
               className="mt-1 w-[147px] flex-1 underline underline-offset-2 hover:no-underline sm:mt-2 sm:w-[147px] md:mt-3 md:w-[170px] lg:mt-4"
             > */}
             <Link
-              href="https://api.whatsapp.com/send/?phone=5511942393021"
+              href="https://w.app/mateusloubach"
+              data-cursor-contrast
               target="_blank"
-              aria-label="Send me a message"
-              className="mt-1 w-[147px] flex-1 text-2xl underline underline-offset-2 hover:no-underline sm:mt-2 sm:w-[147px] md:mt-3 md:w-[170px] lg:mt-4"
+              aria-label={copy("Send me a message", "Envie uma mensagem")}
+              className="mt-3 text-xl underline underline-offset-2 hover:no-underline sm:text-2xl"
             >
-              <AnimatedBody text={"Let's Talk"} className={""} />
+              <AnimatedBody
+                text={copy("Let's Talk", "Vamos conversar")}
+                className={""}
+              />
             </Link>
           </div>
 
-          <div className="flex gap-10 text-[16px] font-bold text-[#e4ded7]  sm:gap-14 sm:text-[24px] md:gap-10 md:text-[16px] lg:gap-20 lg:text-[28px]">
+          <div className="flex gap-3 text-[16px] font-bold text-[#e4ded7] sm:gap-8 sm:text-[24px] md:gap-6 md:text-[16px] xl:gap-14 lg:text-[28px]">
             <Link
-              href="https://github.com/mateusloubach"
+              data-cursor-contrast
+              href="https://www.integr.com.br/"
               target="_blank"
-              aria-label="View GitHub Profile"
+              aria-label={copy("Visit Integr", "Visitar a Integr")}
             >
               <motion.p
                 className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
                 variants={bodyAnimation}
               >
-                <FaGithub size={46} />
+                <Image src="/integr.svg" width={46} height={46} alt="" />
               </motion.p>
             </Link>
             <Link
+              data-cursor-contrast
+              href="https://ko-fi.com/mateusloubach"
+              target="_blank"
+              aria-label={copy(
+                "Support me on Ko-fi",
+                "Apoie meu trabalho no Ko-fi",
+              )}
+            >
+              <motion.p
+                className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+                variants={bodyAnimation}
+              >
+                <SiKofi size={46} />
+              </motion.p>
+            </Link>
+            <Link
+              data-cursor-contrast
+              href="https://www.patreon.com/cw/mateusloubach"
+              target="_blank"
+              aria-label={copy(
+                "Support me on Patreon",
+                "Apoie meu trabalho no Patreon",
+              )}
+            >
+              <motion.p
+                className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
+                variants={bodyAnimation}
+              >
+                <SiPatreon size={46} />
+              </motion.p>
+            </Link>
+            <Link
+              data-cursor-contrast
               href="https://www.linkedin.com/in/mateusloubach/"
               target="_blank"
-              aria-label="View LinkedIn Profile"
+              aria-label={copy(
+                "View LinkedIn Profile",
+                "Ver perfil no LinkedIn",
+              )}
             >
               <motion.p
                 className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
@@ -90,21 +133,13 @@ const Contact = () => {
               </motion.p>
             </Link>
             <Link
-              href="https://twitter.com/mcesarloubach"
-              target="_blank"
-              aria-label="View Twitter Profile"
-            >
-              <motion.p
-                className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-                variants={bodyAnimation}
-              >
-                <FaXTwitter size={46} />
-              </motion.p>
-            </Link>
-            <Link
+              data-cursor-contrast
               href="https://www.instagram.com/mateuscloubach/"
               target="_blank"
-              aria-label="View Instagram Profile"
+              aria-label={copy(
+                "View Instagram Profile",
+                "Ver perfil no Instagram",
+              )}
             >
               <motion.p
                 className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
@@ -113,7 +148,6 @@ const Contact = () => {
                 <FaInstagram size={46} />
               </motion.p>
             </Link>
-
           </div>
         </div>
       </div>

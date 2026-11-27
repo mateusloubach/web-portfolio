@@ -2,58 +2,58 @@ export type ProjectProps = {
   id: number;
   name: string;
   description: string;
+  descriptionPt?: string;
   technologies: string[];
   github: string;
   demo: string;
   image: string;
+  mobileImage?: string;
   available: boolean;
 };
 
 export const devProjects = [
   {
     id: 0,
-    name: "SaasLanding",
+    name: "Integr",
     description:
-      "Empower Yourself with Excellence – Track your progress, stay motivated, and celebrate your achievements with our innovative app.",
-    technologies: ["Next.js", "Typescript", "TailwindCSS"],
-    github: "https://github.com/mateusloubach",
-    demo: "https://saas-landing-alpha.vercel.app/",
-    image: require(".//../../public/projects/frame11.png"),
+      "A website for a systems engineering and AI studio that helps businesses simplify complex operations.",
+    descriptionPt:
+      "Site de um estúdio de engenharia de sistemas e IA que ajuda empresas a simplificar operações complexas.",
+    technologies: [],
+    github: "",
+    demo: "https://www.integr.com.br/",
+    image: require("../../public/projects/integr-desktop.webp"),
+    mobileImage: require("../../public/projects/integr-mobile.webp"),
     available: true,
   },
   {
     id: 1,
-    name: "CloudAI",
+    name: "Casa Mia",
     description:
-    "CloudAI is a decentralized nation where AI and humans work together. AI agents automate tasks, provide services, and interact across platforms.",
-    technologies: ["ViteJs", "Typescript", "ReactJs"],
-    github: "https://github.com/mateusloubach/",
-    demo: "https://cloudaionbase.eth.limo",
-    image: require("../image/CloudAI.png"),
+      "A rental platform for finding a home and managing properties, applications, leases, and payments.",
+    descriptionPt:
+      "Plataforma para encontrar um imóvel e gerenciar propriedades, propostas, contratos e pagamentos.",
+    technologies: [],
+    github: "https://github.com/systemconductor/casa-mia-landing",
+    demo: "https://casa-mia-pied.vercel.app/",
+    image: require("../../public/projects/casa-mia.webp"),
+    mobileImage: require("../../public/projects/casa-mia-mobile.webp"),
     available: true,
   },
   {
     id: 2,
-    name: "AnxietyX",
+    name: "Alternativa",
     description:
-      "Empower Yourself with Excellence – Track your progress, stay motivated, and celebrate your achievements with our innovative app.",
-    technologies: ["NextJs", "Typescript", "Appwrite"],
-    github: "https://github.com/mateusloubach",
-    demo: "https://anxiety-x.vercel.app/",
-    image: require(".//../../public/projects/anxietyx.png"),
+      "A digital consulting studio website showcasing its design, development, and e-commerce services.",
+    descriptionPt:
+      "Site de um estúdio de consultoria digital que apresenta seus serviços de design, desenvolvimento e e-commerce.",
+    technologies: [],
+    github: "",
+    demo: "https://aalternativa.vercel.app/",
+    image: require("../../public/projects/alternativa-desktop.webp"),
+    mobileImage: require("../../public/projects/alternativa-mobile.webp"),
     available: true,
   },
-  // {
-  //   id: 3,
-  //   name: "PkmUp",
-  //   description:
-  //     "PkmUp is an app that allows you to locate and connect to people that want to reach the same destination.",
-  //   technologies: ["Next.js", "Next Auth", "Tailwind CSS"],
-  //   github: "https://github.com/msp-nigeria/mlsc.ng-frontend",
-  //   demo: "",
-  //   image: require("../../public/projects/pkmup.png"),
-  //   available: false,
-  // },
 ];
 
 export const designProjects = [

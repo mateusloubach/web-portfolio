@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const NotFound = () => {
   return (
-    <div className="flex h-[100vh] flex-col items-center justify-center bg-[#0E1016] text-[#e4ded7] gap-5">
+    <div className="flex h-[100vh] flex-col items-center justify-center bg-site-background text-[#e4ded7] gap-5">
       <p className="text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] uppercase">You found an empty space,</p>
       <Image
         src="/404.png"

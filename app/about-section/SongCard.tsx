@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { SongProps } from "./songDetails";
 import Link from "next/link";
+import { useCopy } from "../LocaleProvider";
 
 const SongCard = ({ title, artist, image, link }: SongProps) => {
+  const copy = useCopy();
   return (
-    <Link href={link} target="_blank" aria-label="Check out song on Spotify">
+    <Link href={link} target="_blank" aria-label={copy(`Open ${title}`, `Abrir ${title}`)}>
       <div
         className={`relative flex h-[138px] w-[195px] items-center justify-center overflow-hidden rounded-xl py-0 sm:h-[140px] sm:w-[200px] md:h-[160px] md:w-[250px] lg:h-[190px] lg:w-[270px]`}
       >

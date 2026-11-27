@@ -1,55 +1,5 @@
-"use client";
-import Hero from "./hero-section/Hero";
-import useBlobity from "blobity/lib/react/useBlobity";
-import { useEffect } from "react";
-import { ScrollerMotion } from "scroller-motion";
-import PreLoader from "./animations/PreLoader/PreLoader";
-import { initialBlobityOptions } from "./utils/BlobityConfig";
-import NavBar from "./navbar/NavBar";
-import dynamic from "next/dynamic";
-const Work = dynamic(() => import("./work-section/Work"));
-const About = dynamic(() => import("./about-section/About"));
-const Contact = dynamic(() => import("./contact-section/Contact"));
-const Footer = dynamic(() => import("./footer/Footer"));
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  const blobityInstance = useBlobity(initialBlobityOptions);
-
-  useEffect(() => {
-    if (blobityInstance.current) {
-      // @ts-ignore for debugging purposes or playing around
-      window.blobity = blobityInstance.current;
-    }
-  }, [blobityInstance]);
-
-  if (typeof window === "undefined") {
-    return null;
-  }
-  return (
-    <>
-      <PreLoader />
-      {/* <NavBar /> */}
-      {typeof window !== "undefined" && window.innerWidth > 1024}
-
-      {window.innerWidth > 1024 ? (
-        <ScrollerMotion>
-          <main className="flex flex-col items-center justify-center">
-            <Hero />
-            <Work />
-            <About />
-            <Contact />
-            <Footer />
-          </main>
-        </ScrollerMotion>
-      ) : (
-        <main className="flex flex-col items-center justify-center">
-          <Hero />
-          <Work />
-          <About />
-          <Contact />
-          <Footer />
-        </main>
-      )}
-    </>
-  );
+  redirect("/en");
 }
